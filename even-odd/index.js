@@ -25,15 +25,23 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const evenOrOddLength = numbers.length % 2 == 0;
-    resultLength.innerText = evenOrOddLength
-        ? "La longitud de la lista es par"
-        : "La longitud de la lista es impar";
+    if (numbers.length == 0) {
 
-    const evenOrOddValues = (numbers.reduce((prev, current) => prev + current)) % 2 == 0;
-    resultValues.innerText = evenOrOddValues
-        ? "La suma de la lista es par"
-        : "La suma de la lista es impar";
+        alert("Please add a number to the list.");
+
+    } else {
+
+        const evenOrOddLength = numbers.length % 2 == 0;
+        resultLength.innerText = evenOrOddLength
+            ? "La longitud de la lista es par"
+            : "La longitud de la lista es impar";
+
+        const evenOrOddValues = (numbers.reduce((prev, current) => prev + current)) % 2 == 0;
+        resultValues.innerText = evenOrOddValues
+            ? "La suma de la lista es par"
+            : "La suma de la lista es impar";
+
+    }
 });
 
 const clear = document.querySelector("#clear");
