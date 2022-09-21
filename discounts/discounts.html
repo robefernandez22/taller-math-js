@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Discounts</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Back to home</a>
+                </li>
+                <li>
+                    <a href="../math/math.html">Basic formulas</a>
+                </li>
+                <li>
+                    <a href="../platzimath/platzimath.html">Basic statistics</a>
+                </li>
+                <li>
+                    <a href="../salarios/salarios.html">Salary analysis</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Discounts</h1>
+            <p>Please, enter the following data:</p>
+
+            <form>
+                <label for="price">Price of the product:</label>
+                <input type="number" name="price" id="price" placeholder="Price" />
+
+                <label for="discountCouppon">Discount cuppon:</label>
+                <input type="text" name="discountCouppon" id="discountCouppon" placeholder="Discount" />
+
+                <input type="submit" value="Submit" />
+
+                <label for="discount">Discounted price applied:</label>
+                <input type="text" name="result" id="result" placeholder="Result" disabled />
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hecho con amor gracias a Platzi 💚</p>
+    </footer>
+
+    <script src="./discounts.js"></script>
+</body>
+
+</html>

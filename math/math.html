@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Math</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Back to home</a>
+                </li>
+                <li>
+                    <a href="../discounts/discounts.html">Porcentajes y descuentos</a>
+                </li>
+                <li>
+                    <a href="../platzimath/platzimath.html">Estadística básica</a>
+                </li>
+                <li>
+                    <a href="../salarios/salarios.html">Análisis salarial</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Square</h1>
+            <!-- <p>Averigua el perímetro y el área de un cuadrado</p> -->
+            <p>Know the perimeter and the area of a square</p>
+
+            <form id="formSquare">
+                <!-- <label>Por favor, introduce cuanto mide cada lado de tu cuadrado</label> -->
+                <label>Please, introduce the side's longitud of the square</label>
+                <input type="number" id="side" />
+
+                <input type="submit" value="Submit" />
+            </form>
+            <p id="resultsSquare"></p>
+        </section>
+
+        <section>
+            <!-- Triangle -->
+            <h1>Triangle</h1>
+            <!-- <p>Averigua el perímetro y el área de un triángulo</p> -->
+            <p>Know the perimeter and area of a triangle</p>
+
+            <form id="formTriangle">
+                <!-- <label>Por favor, introduce cuanto mide un lado de tu triángulo</label> -->
+                <label>Please, introduce one side of your triangle</label>
+                <input type="number" id="sideOne" />
+
+                <!-- <label>Por favor, introduce cuanto mide el otro lado de tu triángulo</label> -->
+                <label>Please, introduce the other side of your triangle</label>
+                <input type="number" id="sideTwo" />
+
+                <!-- <label>Por favor, introduce cuanto mide la base de tu triángulo</label> -->
+                <label>Please, introduce the base of your triangle</label>
+                <input type="number" id="base" />
+
+                <input type="submit" value="Submit" />
+            </form>
+            <p id="resultsTriangle"></p>
+        </section>
+
+        <section>
+            <!-- Circle -->
+            <h1>Circle</h1>
+            <!-- <p>Averigua el diámetro, la circunferencia y el área de un círculo</p> -->
+            <p>Know the diameter, circumferencie and area of a circle</p>
+
+            <form id="formCircle">
+                <!-- <label>Por favor, introduce el radio de tu círculo</label> -->
+                <label>Please, introduce the radio of your circle</label>
+                <input type="number" id="radio" />
+
+                <input type="submit" value="Submit" />
+            </form>
+            <p id="circleResults"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hecho con amor desde Platzi.</p>
+    </footer>
+
+    <script src="./square.js"></script>
+    <script src="./triangle.js"></script>
+    <script src="./circle.js"></script>
+    <script src="./math.js"></script>
+</body>
+
+</html>

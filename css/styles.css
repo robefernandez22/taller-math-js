@@ -1,0 +1,32 @@
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 50px;
+    text-align: center;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+form {
+    display: grid;
+    place-items: center;
+}
+
+input {
+    margin-bottom: 25px;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
