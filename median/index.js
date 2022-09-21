@@ -1,48 +1,35 @@
 const medianResult = document.querySelector("#medianResult");
 const listNumbers = document.querySelector("#listNumbers");
-const number = document.querySelector("#number");
 let numbers = [];
 
-const addNumber = document.querySelector("#addNumber");
-addNumber.addEventListener("click", () => {
+const number = document.querySelector("#number");
+number.addEventListener("keyup", (e) => e.keyCode === 13 ? addNumber() : null);
 
-    if (!number.value) {
-        alert("Please, enter a number.");
-        return;
-    } else if (numbers.length == 0) {
-        listNumbers.innerText = `${listNumbers.textContent} ${number.value}`;
-    } else {
-        listNumbers.innerText = `${listNumbers.textContent}, ${number.value}`;
-    }
+const addNumberButton = document.querySelector("#addNumberButton");
+addNumberButton.addEventListener("click", addNumber);
 
-    numbers.push(Number(number.value));
-    number.value = "";
+const calculateMedian = document.querySelector("#calculateMedian");
+calculateMedian.addEventListener("click", () => {
 
-});
-
-const form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
-
-    e.preventDefault();
-
-    const evenOrOdd = numbers.length % 2;
     let median = 0;
+    const isEven = numbers.length % 2 == 0;
 
-    if (evenOrOdd) {// Is odd
-        
-        const position = Math.floor(numbers.length / 2);
-        median = numbers[position];
-
-    } else { // Is even
+    if (isEven) {
 
         let firstPosition = numbers.length / 2;
         let secondPosition = firstPosition - 1;
 
+        numbers.sort((a, b) => a - b);
         median = (numbers[firstPosition] + numbers[secondPosition]) / 2;
+
+    } else {
+
+        const position = Math.floor(numbers.length / 2);
+        median = numbers[position];
 
     }
 
-    medianResult.textContent = `${medianResult.textContent} ${median}`;
+    medianResult.textContent = `Median result: ${median}`;
 
 });
 
@@ -55,3 +42,17 @@ cleanResults.addEventListener("click", () => {
     numbers = [];
 
 });
+
+function addNumber() {
+    if (!number.value) {
+        alert("Please, enter a number.");
+        return;
+    } else if (numbers.length == 0) {
+        listNumbers.innerText = `${listNumbers.textContent} ${number.value}`;
+    } else {
+        listNumbers.innerText = `${listNumbers.textContent}, ${number.value}`;
+    }
+
+    numbers.push(Number(number.value));
+    number.value = "";
+}
