@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Platzi University</title>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenido/a a Platzi University!</h1>
+        <p>Averigue cual es el promedio ponderado de sus calificaciones gracias a JavaScript.</p>
+    </header>
+
+    <main>
+        <section>
+            <form>
+                <label for="nota">Introduzca una nota:</label>
+                <input type="number" name="nota" id="nota" />
+
+                <label for="nota">Introduzca el peso de la nota:</label>
+                <input type="number" name="peso" id="peso" />
+
+                <button type="button" id="addValues">Añadir nota y peso</button>
+                <input type="submit" class="submit" value="Saber media ponderada">
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nota</th>
+                        <th>Peso</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    
+                </tbody>
+            </table>
+
+            <p id="result"></p>
+            <button id="cleanTable">Limpiar tabla</button>
+        </section>
+    </main>
+
+    <!-- <footer>
+        <p>Hecho con amor gracias a Platzi 💚</p>
+    </footer> -->
+
+    <script src="./index.js"></script>
+</body>
+</html>

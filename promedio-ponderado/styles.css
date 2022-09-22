@@ -1,0 +1,43 @@
+body {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+input {
+    display: grid;
+    margin-bottom: 25px;
+}
+
+.submit {
+    display: grid;
+    margin: 0;
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+table {
+    margin-top: 25px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 3px solid;
+}
+
+th, td {
+    padding: 10px;
+    border-collapse: collapse;
+    border: 3px solid;
+}
+
+#cleanTable {
+    margin-top: 15px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
