@@ -11,24 +11,9 @@ addNumberButton.addEventListener("click", addNumber);
 const calculateMedian = document.querySelector("#calculateMedian");
 calculateMedian.addEventListener("click", () => {
 
-    let median = 0;
-    const isEven = numbers.length % 2 == 0;
-
-    if (isEven) {
-
-        let firstPosition = numbers.length / 2;
-        let secondPosition = firstPosition - 1;
-
-        numbers.sort((a, b) => a - b);
-        median = (numbers[firstPosition] + numbers[secondPosition]) / 2;
-
-    } else {
-
-        const position = Math.floor(numbers.length / 2);
-        median = numbers[position];
-
-    }
-
+    const isOdd = PlatziMath.evenOrOddLengthOfList(numbers);
+    let median = isOdd ? PlatziMath.calculateMedianOdd(numbers) 
+        : PlatziMath.calculateMedianEven(numbers);
     medianResult.textContent = `Median result: ${median}`;
 
 });
@@ -44,6 +29,7 @@ cleanResults.addEventListener("click", () => {
 });
 
 function addNumber() {
+
     if (!number.value) {
         alert("Please, enter a number.");
         return;
@@ -55,4 +41,5 @@ function addNumber() {
 
     numbers.push(Number(number.value));
     number.value = "";
+
 }

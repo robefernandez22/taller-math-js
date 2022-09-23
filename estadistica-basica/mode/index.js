@@ -1,6 +1,5 @@
 const listNumbers = document.querySelector("#listNumbers");
 const modaResult = document.querySelector("#modaResult");
-
 let arrayNumbers = [];
 
 const numberInput = document.querySelector("#numberInput");
@@ -19,7 +18,7 @@ calculateModeButton.addEventListener("click", (e) => {
         return;
     }
 
-    calculateMode();
+    modaResult.textContent = `Moda: ${PlatziMath.calculateMode(arrayNumbers)}`;
 
 });
 
@@ -32,37 +31,6 @@ clean.addEventListener("click", () => {
     arrayNumbers = [];
 
 });
-
-function calculateMode() {
-
-    const listCount = {};
-    for (let index = 0; index < arrayNumbers.length; index++) {
-        const element = arrayNumbers[index];
-
-        if (listCount[element]) {
-            listCount[element] += 1;
-        } else {
-            listCount[element] = 1;
-        }
-    }
-
-    let listOrder = Object.entries(listCount).sort((a, b) => { return a[1] - b[1] });
-    let previous = listOrder[listOrder.length - 1][1];
-    let currentResult = listOrder[listOrder.length - 1][0];
-
-    for (let index = 0; index < listOrder.length - 1; index++) {
-
-        const current = listOrder[index][1];
-
-        if (current == previous) {
-            currentResult += `, ${listOrder[index][0]}`;
-        }
-
-    }
-
-    modaResult.textContent = `Moda: ${currentResult}`;
-
-}
 
 function addNumbersToArray() {
 

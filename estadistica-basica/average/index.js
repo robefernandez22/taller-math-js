@@ -27,10 +27,11 @@ form.addEventListener("submit", (e) => {
 
     if (arrayNumbers.length == 0) {
         alert("Por favor, introduzca algún número para realizar la media.");
-    } else {
-        const average = (arrayNumbers.reduce((prev, current) => prev + current)) / arrayNumbers.length;
-        averageText.innerText = `Average: ${average}`;
+        return;
     }
+
+    const average = PlatziMath.calculateAverage(arrayNumbers);
+    averageText.innerText = `Average: ${average}`;
 
 });
 

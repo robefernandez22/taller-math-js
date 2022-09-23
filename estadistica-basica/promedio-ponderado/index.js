@@ -1,9 +1,8 @@
-let notasPeso = [];
-
+const result = document.querySelector("#result");
+const tbody = document.querySelector("tbody");
 const nota = document.querySelector("#nota");
 const peso = document.querySelector("#peso");
-const tbody = document.querySelector("tbody");
-const result = document.querySelector("#result");
+let notasPeso = [];
 
 const addValues = document.querySelector("#addValues");
 addValues.addEventListener("click", () => {
@@ -45,14 +44,7 @@ form.addEventListener("submit", (e) => {
         return;
     }
 
-    const acumulacionNota = notasPeso.map((object) => { return object.nota * object.peso })
-        .reduce((prev, current) => { return prev + current });
-    
-    const acumulacionPeso = notasPeso.map((object) => { return object.peso })
-        .reduce((prev, current) => { return prev + current });
-
-    const promedioPonderado = acumulacionNota / acumulacionPeso;
-    result.innerText = `El promedio ponderado es ${promedioPonderado}`;
+    result.innerText = `El promedio ponderado es ${PlatziMath.weightedAverage(notasPeso)}`;
 
 });
 

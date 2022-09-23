@@ -16,14 +16,18 @@
     <main>
         <section>
             <form>
-                <label for="nota">Introduzca una nota:</label>
-                <input type="number" name="nota" id="nota" />
+                <label for="nota">
+                    <span>Introduzca una nota:</span>
+                    <input type="number" name="nota" id="nota" />
+                </label>
 
-                <label for="nota">Introduzca el peso de la nota:</label>
-                <input type="number" name="peso" id="peso" />
+                <label for="nota">
+                    <span>Introduzca el peso de la nota:</span>
+                    <input type="number" name="peso" id="peso" />
+                </label>
 
                 <button type="button" id="addValues">Añadir nota y peso</button>
-                <input type="submit" class="submit" value="Saber media ponderada">
+                <input type="submit" class="submit" value="Calculate" />
             </form>
 
             <table>
@@ -44,10 +48,11 @@
         </section>
     </main>
 
-    <!-- <footer>
-        <p>Hecho con amor gracias a Platzi 💚</p>
-    </footer> -->
+    <footer>
+        <p>Made with love thanks to Platzi 💚</p>
+    </footer>
 
+    <script src="../../functions.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
