@@ -30,6 +30,13 @@ class PlatziMath {
         return (list.reduce((prev, current) => prev + current)) % 2;
     }
 
+    static calculateMedian(list) {
+        if (this.evenOrOddLengthOfList(list)) {
+            return this.calculateMedianOdd(list) 
+        }
+        return this.calculateMedianEven(list);
+    }
+
     /**
      * Método encargado de calcular la mediana de una lista par.
      * De manera que, al ser la lista par, primero se ordena de menor a mayor.
