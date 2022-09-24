@@ -11,10 +11,7 @@ addNumberButton.addEventListener("click", addNumber);
 const calculateMedian = document.querySelector("#calculateMedian");
 calculateMedian.addEventListener("click", () => {
 
-    const isOdd = PlatziMath.evenOrOddLengthOfList(numbers);
-    let median = isOdd ? PlatziMath.calculateMedianOdd(numbers) 
-        : PlatziMath.calculateMedianEven(numbers);
-    medianResult.textContent = `Median result: ${median}`;
+    medianResult.textContent = `Median result: ${PlatziMath.calculateMedian(numbers)}`;
 
 });
 
