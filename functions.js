@@ -31,6 +31,7 @@ class PlatziMath {
     }
 
     static calculateMedian(list) {
+        list.sort((a, b) => a - b);
         if (this.evenOrOddLengthOfList(list)) {
             return this.calculateMedianOdd(list) 
         }
@@ -49,7 +50,6 @@ class PlatziMath {
     static calculateMedianEven(list) {
         let firstPosition = list.length / 2;
         let secondPosition = firstPosition - 1;
-        list.sort((a, b) => a - b);
         return (list[firstPosition] + list[secondPosition]) / 2;
     }
 
